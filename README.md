@@ -13,14 +13,6 @@ Tools: MySQL for querying & Spreadsheet (Google Sheets/Excel) for visualization
 
 I answered several key business questions using optimized SQL queries and provided insights as a Business Intelligence Analyst.
 
-## Questions
-A. You are going to import the sql data file and insert that data into the Mysql database.
-
-Download the sample data here: sample wholesale.sql Please import the data into your mysql database
-
-B. Please write in document the query for each question, show the result of the query, and give your
-analysis of the data. Make sure your query is the most optimized.
-
 ## 🏆 Key Business Questions & SQL Queries
 
 ### 1️⃣ Which Product is the Most Bought Each Month?
