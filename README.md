@@ -1,7 +1,17 @@
-## Background
-This is an assignment that I did before getting a job at the company. The tools I used were MySQL and Spreadsheet to visualize the data. 
+# 📊 Wholesale Sales Analysis – SQL & Spreadsheet Project
 
-Here are attached the questions and queries that I made:
+## 📌 Background
+This project was part of an assignment I completed before securing a job. The objective was to analyze wholesale sales data using MySQL for querying and a Spreadsheet for data visualization.
+
+## 🔍 Project Scope
+
+### 📥 Dataset & Tools Used
+
+Dataset: Sample wholesale sales data
+
+Tools: MySQL for querying & Spreadsheet (Google Sheets/Excel) for visualization
+
+I answered several key business questions using optimized SQL queries and provided insights as a Business Intelligence Analyst.
 
 ## Questions
 A. You are going to import the sql data file and insert that data into the Mysql database.
@@ -11,14 +21,12 @@ Download the sample data here: sample wholesale.sql Please import the data into 
 B. Please write in document the query for each question, show the result of the query, and give your
 analysis of the data. Make sure your query is the most optimized.
 
-1. Which product is the most bought for each month?
-2. What are the sales from each city and what are the top 3 cities?
-3. Which product is the top selling for each city?
-4. What is the average profit from each order?
-5. What information can you give as BI Analyst?
+## 🏆 Key Business Questions & SQL Queries
 
-## Queries
-1. answering question number 1 about which products are most frequently purchased each month
+### 1️⃣ Which Product is the Most Bought Each Month?
+
+This query identifies the best-selling product for each month based on total sales.
+
 ```sql
 SELECT
     `Month`,
@@ -37,8 +45,12 @@ FROM (
 ) ranked_sales
 WHERE `Rank` = 1;
 ```
+✅ Insight: This helps businesses understand seasonal demand and adjust inventory accordingly.
 
-2. answering question number 2 about sales from each city and top 3 cities
+### 2️⃣ What are the Total Sales from Each City? What are the Top 3 Cities?
+
+This query calculates total sales by city and ranks the top-performing ones.
+
 ```sql
 select `City`,
 SUM(`Sales`) as `Total_Sales`
@@ -47,8 +59,12 @@ group by `City`
 order by `Total_Sales` DESC
 `Limit`3
 ```
+✅ Insight: Identifies high-performing regions, helping businesses allocate resources efficiently.
 
-3. answering question number 3 about top selling product for each city
+### 3️⃣ Which Product is the Top Selling in Each City?
+
+This query determines the best-selling product for every city.
+
 ```sql
 SELECT
     `Product_Name`,
@@ -68,7 +84,12 @@ FROM (
 WHERE `Rank` = 1
 ORDER BY `Total_Sales` DESC;
 ```
-4. answering question number 4 about average profit from each order
+✅ Insight: Helps businesses customize marketing strategies for different cities.
+
+### 4️⃣ What is the Average Profit Per Order?
+
+This query calculates the average profit for each order.
+
 ```sql
 SELECT
     `Order_ID`,
@@ -84,8 +105,21 @@ FROM (
 ) avg_profit_per_category
 ORDER BY `Total_Average_Profit` DESC;
 ```
+✅ Insight: Assists in profit margin analysis and pricing strategies.
+
+## 📊 Data Visualization & Insights
+
+The results from the SQL queries were visualized using Spreadsheets to present:
+
+📌 Top-selling products per month
+
+📌 Sales distribution by city
+
+📌 Best-selling products per region
+
+📌 Average profit trends
 
 For more detail, you can read [my article](https://medium.com/@ciaamoons/archieve-an-assignment-6b6f988b7ebc) in here
 
-Thank you
+Thank you!
 
