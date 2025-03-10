@@ -85,3 +85,7 @@ FROM (
 ORDER BY `Total_Average_Profit` DESC;
 ```
 
+For more detail, you can read [my article](https://medium.com/@ciaamoons/archieve-an-assignment-6b6f988b7ebc) in here
+
+Thank you
+
